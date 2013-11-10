@@ -1,11 +1,11 @@
-<?php
+ï»¿<?php
 
-include('__conn.php'); // Á¬½ÓÊý¾Ý¿â
+include('__conn.php'); // è¿žæŽ¥æ•°æ®åº“
 
-/* ¸üÐÂ
-	$tableÎª±íÃû , $para ÎªsetµÄ²ÎÊý, $whereÎªwhereÌõ¼þ
-	(¶àÌõsetÓï¾äÓÃ,¸ô¿ª)
-	·µ»ØÖ´ÐÐ½á¹û
+/* æ›´æ–°
+	$tableä¸ºè¡¨å , $para ä¸ºsetçš„å‚æ•°, $whereä¸ºwhereæ¡ä»¶
+	(å¤šæ¡setè¯­å¥ç”¨,éš”å¼€)
+	è¿”å›žæ‰§è¡Œç»“æžœ
 */
 function update($table, $set, $where)
 {

@@ -1,9 +1,9 @@
-
+ï»¿
 <?php
 /*
 Author: Ng1091
 Date: 2013-10-31
-Description: µÇÂ¼ÑéÖ¤£¬´«Èë$user¡¢$pass£¬ÑéÖ¤µÇÂ¼ÐÅÏ¢ÊÇ·ñÕýÈ·²¢·µ»Ø½á¹û¡£
+Description: ç™»å½•éªŒè¯ï¼Œä¼ å…¥$userã€$passï¼ŒéªŒè¯ç™»å½•ä¿¡æ¯æ˜¯å¦æ­£ç¡®å¹¶è¿”å›žç»“æžœã€‚
 */
 
 function login($user, $pass)
@@ -12,21 +12,21 @@ function login($user, $pass)
 	$err = '';
 
 
-	/*¡¡ÅÐ¿Õ¡¡*/
+	/*ã€€åˆ¤ç©ºã€€*/
 	if(is_none($user))
 	{
-		$err = 'µÇÂ¼Ãû²»ÄÜÎª¿Õ';
+		$err = 'ç™»å½•åä¸èƒ½ä¸ºç©º';
 		return $err;
 	}
 	if(is_none($pass))
 	{
-		$err = 'ÃÜÂë²»ÄÜÎª¿Õ';
+		$err = 'å¯†ç ä¸èƒ½ä¸ºç©º';
 		return $err;
 	}
 	
-	/* ÕýÔò */
+	/* æ­£åˆ™ */
 	
-	// ÅÐ¶ÏÊÇÓÊÏä»¹ÊÇÑ§ºÅ
+	// åˆ¤æ–­æ˜¯é‚®ç®±è¿˜æ˜¯å­¦å·
 	
 	$login_type = 'user_login';
 	$login_type = 'user_stuid';
@@ -34,16 +34,16 @@ function login($user, $pass)
 	
 	
 	
-	/* ÏÞ³¤*/
+	/* é™é•¿*/
 	if(len_limit($user, $users_len[$login_type])
 	{
-		$err = 'µÇÂ¼Ãû³¬³ö³¤¶ÈÏÞÖÆ';
+		$err = 'ç™»å½•åè¶…å‡ºé•¿åº¦é™åˆ¶';
 		return $err;
 	}
 
-	/* ÑéÖ¤¡¡& µÇÂ¼ */
-	// È¡µÃpasskey
-	include('dal/__select.php'); // µ×²ãº¯Êý
+	/* éªŒè¯ã€€& ç™»å½• */
+	// å–å¾—passkey
+	include('dal/__select.php'); // åº•å±‚å‡½æ•°
 
 	$passkey = select('user_passkey', 'ng_users', "$login_type='$user' limit 1");
 	
@@ -63,20 +63,20 @@ function login($user, $pass)
 
 	if(select('uid', 'ng_users', "$login_type='$user' and user_pass='$pass' limit 1"))
 	{
-		// µÇÂ¼³É¹¦
-		// ¼ÓÈë»á»° 
+		// ç™»å½•æˆåŠŸ
+		// åŠ å…¥ä¼šè¯ 
 		
-		return 'µÇÂ¼³É¹¦';
+		return 'ç™»å½•æˆåŠŸ';
 	}
 	else
 	{
-		$err = 'µÇÂ¼Ê§°Ü,ÓÃ»§Ãû»òÃÜÂë´íÎó';
+		$err = 'ç™»å½•å¤±è´¥,ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯';
 		return $err;
 	}
 }
 
 
-// ´«Èë²ÎÊý login & pass
+// ä¼ å…¥å‚æ•° login & pass
 $str = login($_POST['login'],$_POST['pass']);
 echo $str;
 

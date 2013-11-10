@@ -1,12 +1,12 @@
-<?php
+ï»¿<?php
 
-include('conn.php'); // Á¬½ÓÊý¾Ý¿â
+include('conn.php'); // è¿žæŽ¥æ•°æ®åº“
 
 /* 
-    ²åÈëÒ»Ìõ¼ÇÂ¼
-	$paraÎªkey-valueÊý×é£¬keyÊôÐÔÃû£¬valueÎªÖµ
-	$talbe Îª±íÃû
-	·µ»ØÖ´ÐÐ½á¹û
+    æ’å…¥ä¸€æ¡è®°å½•
+	$paraä¸ºkey-valueæ•°ç»„ï¼Œkeyå±žæ€§åï¼Œvalueä¸ºå€¼
+	$talbe ä¸ºè¡¨å
+	è¿”å›žæ‰§è¡Œç»“æžœ
 */
 function insert($para, $table)
 {
@@ -28,7 +28,7 @@ function insert($para, $table)
 	$str .= ')';
 	$val .= ')';
 	
-	$str .= 'VALUES(' . $val; // ×îÖÕµÄsqlÓï¾ä
+	$str .= 'VALUES(' . $val; // æœ€ç»ˆçš„sqlè¯­å¥
 	// echo $str; 
 	return write_db($str);
 }

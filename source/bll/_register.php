@@ -1,29 +1,29 @@
-<?php
+ï»¿<?php
 
 function register()
 {
 	include('_main.php');
 	
 	$err = '';
-	/* Ä¬ÈÏÖµ */
+	/* é»˜è®¤å€¼ */
 	$para['user_status'] = 0;
 	$para['user_school'] = 'whu';
 	$para['user_nickname']= '';
 	$para['user_name']= '';
 	
-	/*¡¡ÅĞ¿Õ¡¡*/
+	/*ã€€åˆ¤ç©ºã€€*/
 	if(strlen($_POST['user_login']) == 0 && strlen($_POST['user_stuid']) == 0)
 	{
-		$err = 'ÓÊÏäºÍÑ§ºÅ²»ÄÜÍ¬Ê±Îª¿Õ';
+		$err = 'é‚®ç®±å’Œå­¦å·ä¸èƒ½åŒæ—¶ä¸ºç©º';
 		return $err;
 	}
 	if(strlen($_POST['user_pass']) == 0)
 	{
-		$err = 'ÃÜÂë²»ÄÜÎª¿Õ';
+		$err = 'å¯†ç ä¸èƒ½ä¸ºç©º';
 		return $err;
 	}
 	
-	/* ÅĞ¿Õ & Ìî³ä */
+	/* åˆ¤ç©º & å¡«å…… */
 	if(strlen($_POST['user_login']) == 0)
 	{
 		$para['user_login'] = 'none';
@@ -49,15 +49,15 @@ function register()
 		$para['user_name'] = $_POST['user_name'];
 	}
 	
-	/* ÏŞ³¤*/
+	/* é™é•¿*/
 	if(strlen($_POST['user_login']) > $users_len['user_login'])
 	{
-		$err = 'ÓÊÏä³¤¶È³¬³öÏŞÖÆ';
+		$err = 'é‚®ç®±é•¿åº¦è¶…å‡ºé™åˆ¶';
 		return $err;
 	}
 	if(strlen($_POST['user_pass']) > $users_len['user_pass'])
 	{
-		$err = 'ÃÜÂë³¤¶È³¬³öÏŞÖÆ';
+		$err = 'å¯†ç é•¿åº¦è¶…å‡ºé™åˆ¶';
 		return $err;
 	}
 	if(strlen($_POST['user_status']) > $users_len['user_status'])
@@ -67,36 +67,36 @@ function register()
 	}
 	if(strlen($_POST['user_school']) > $users_len['user_school'])
 	{
-		$err = 'Ñ§Ğ£³¤¶È³¬³öÏŞÖÆ';
+		$err = 'å­¦æ ¡é•¿åº¦è¶…å‡ºé™åˆ¶';
 		return $err;
 	}
 	if(strlen($_POST['user_stuid']) > $users_len['user_stuid'])
 	{
-		$err = 'Ñ§ºÅ³¤¶È³¬³öÏŞÖÆ';
+		$err = 'å­¦å·é•¿åº¦è¶…å‡ºé™åˆ¶';
 		return $err;
 	}
 	if(strlen($_POST['user_nickname']) > $users_len['user_nickname'])
 	{
-		$err = 'êÇ³Æ³¤¶È³¬³öÏŞÖÆ';
+		$err = 'æ˜µç§°é•¿åº¦è¶…å‡ºé™åˆ¶';
 		return $err;
 	}
 	if(strlen($_POST['user_name']) > $users_len['user_name'])
 	{
-		$err = 'ĞÕÃû³¤¶È³¬³öÏŞÖÆ';
+		$err = 'å§“åé•¿åº¦è¶…å‡ºé™åˆ¶';
 		return $err;
 	}
 	
 	
-	/* ÕıÔò */
+	/* æ­£åˆ™ */
 	if(!preg_match('/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/', $_POST['user_login']))
 	{
-		$err = 'ÓÊÏä²»ÕıÈ·';
+		$err = 'é‚®ç®±ä¸æ­£ç¡®';
 		return $err;
 	}
 	// password
 	
 	
-	/* Éú³É */
+	/* ç”Ÿæˆ */
 	$para['user_registered'] = time();
 	
 	$temp = MD5(time());
@@ -108,7 +108,7 @@ function register()
 	$para['user_pass'] = get_pass_hash(MD5($_POST['user_pass']), $random_key['user_passkey']. $para['user_passkey']);	
 	
 	
-	/* ·â×° Ğ´Èëdb */
+	/* å°è£… å†™å…¥db */
 	foreach($users_field as $value)
 	{
 		if(!isset($para[$value])) {
@@ -118,16 +118,16 @@ function register()
 
 	print_r($para); // debug
 	
-	include('dal/__insert.php'); // µ×²ãº¯Êı
+	include('dal/__insert.php'); // åº•å±‚å‡½æ•°
 	if(insert($para,'ng_users'))
 	{
-		// ×¢²á³É¹¦
+		// æ³¨å†ŒæˆåŠŸ
 		// return 1;
-		return '×¢²á³É¹¦';
+		return 'æ³¨å†ŒæˆåŠŸ';
 	}
 	else
 	{
-		$err = '×¢²áÊ§°Ü';
+		$err = 'æ³¨å†Œå¤±è´¥';
 		return $err;
 	}
 
@@ -140,19 +140,19 @@ echo $str;
 
 /*
 
-//×¢²áĞÅÏ¢ÅĞ¶Ï
+//æ³¨å†Œä¿¡æ¯åˆ¤æ–­
 if(!preg_match('/^[\w\x80-\xff]{3,15}$/', $username)){
-	exit('´íÎó£ºÓÃ»§Ãû²»·ûºÏ¹æ¶¨¡£<a href="javascript:history.back(-1);">·µ»Ø</a>');
+	exit('é”™è¯¯ï¼šç”¨æˆ·åä¸ç¬¦åˆè§„å®šã€‚<a href="javascript:history.back(-1);">è¿”å›</a>');
 }
 if(strlen($password) < 6){
-	exit('´íÎó£ºÃÜÂë³¤¶È²»·ûºÏ¹æ¶¨¡£<a href="javascript:history.back(-1);">·µ»Ø</a>');
+	exit('é”™è¯¯ï¼šå¯†ç é•¿åº¦ä¸ç¬¦åˆè§„å®šã€‚<a href="javascript:history.back(-1);">è¿”å›</a>');
 }
 if(!preg_match('/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/', $email)){
-			     ¡¡¡¡¡¡¡¡//Æ¥ÅäemailµØÖ· 
-	exit('´íÎó£ºµç×ÓÓÊÏä¸ñÊ½´íÎó¡£<a href="javascript:history.back(-1);">·µ»Ø</a>');
+			     ã€€ã€€ã€€ã€€//åŒ¹é…emailåœ°å€ 
+	exit('é”™è¯¯ï¼šç”µå­é‚®ç®±æ ¼å¼é”™è¯¯ã€‚<a href="javascript:history.back(-1);">è¿”å›</a>');
 }
 if(strlen($name) > 10) {
-	exit('´íÎó£ºĞÕÃû³¤¶È²»·ûºÏ¹æ¶¨.<a href="javascript:history.back(-1);">·µ»Ø</a>');
+	exit('é”™è¯¯ï¼šå§“åé•¿åº¦ä¸ç¬¦åˆè§„å®š.<a href="javascript:history.back(-1);">è¿”å›</a>');
 }
 */
 

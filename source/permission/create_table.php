@@ -1,31 +1,31 @@
-<html>
+Ôªø<html>
 <body>
 
 <?php
 /*
 Author: ng1091
 Date: 2013-08-24
-Description: ¥¥Ω® ˝æ›ø‚∫Õ ˝æ›±Ì
+Description: ÂàõÂª∫Êï∞ÊçÆÂ∫ìÂíåÊï∞ÊçÆË°®
 */
 
 
-$con = mysql_connect("localhost","sedgeadmin","sedge123","sedgeadmin"); // ¡¨Ω” ˝æ›ø‚£¨”√ªß√˚sedgeadmin£¨√‹¬Îsedge123£¨newlink±Í ∂sedgeadmin
+$con = mysql_connect("localhost","sedgeadmin","sedge123","sedgeadmin"); // ËøûÊé•Êï∞ÊçÆÂ∫ìÔºåÁî®Êà∑ÂêçsedgeadminÔºåÂØÜÁ†Åsedge123ÔºånewlinkÊ†áËØÜsedgeadmin
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
 
-$sql = "CREATE DATABASE `sedge`";  // ¥¥Ω® ˝æ›ø‚ sedge
+$sql = "CREATE DATABASE `sedge`";  // ÂàõÂª∫Êï∞ÊçÆÂ∫ì sedge
 if (!mysql_query($sql,$con)) {
 	echo "Create db failed!<br>";
 	die(mysql_error());
 }
 
 
-mysql_select_db("sedge", $con); // —°‘Ò ˝æ›ø‚ sedge
+mysql_select_db("sedge", $con); // ÈÄâÊã©Êï∞ÊçÆÂ∫ì sedge
 
 
-/* ¥¥Ω® <ng_user> */
+/* ÂàõÂª∫ <ng_user> */
 $sql = "CREATE TABLE `ng_user` (
 		`ID` int(11) unsigned NOT NULL auto_increment,
 		`user_login` varchar(100) NOT NULL default 'none',
@@ -49,7 +49,7 @@ if (!mysql_query($sql,$con)) {
 
 
 
-/* ¥¥Ω® <ng_user_class> */
+/* ÂàõÂª∫ <ng_user_class> */
 $sql = "CREATE TABLE `ng_user_class` (
 		`meta_id` int(11) unsigned NOT NULL auto_increment,
 		`user_id` int(11) unsigned NOT NULL,
@@ -68,7 +68,7 @@ if (!mysql_query($sql,$con)) {
 
 
 
-/* ¥¥Ω® <ng_usermeta> */
+/* ÂàõÂª∫ <ng_usermeta> */
 $sql = "CREATE TABLE `ng_usermeta` (
 		`meta_id` int(11) unsigned NOT NULL auto_increment,
 		`user_id` int(11) unsigned NOT NULL,
@@ -85,7 +85,7 @@ if (!mysql_query($sql,$con)) {
 }
 
 
-/* ¥¥Ω® <ng_option> */
+/* ÂàõÂª∫ <ng_option> */
 $sql = "CREATE TABLE `ng_option` (
 		`option_id` int(11) unsigned NOT NULL auto_increment,
 		`option_name` varchar(255) NOT NULL,
@@ -99,7 +99,7 @@ if (!mysql_query($sql,$con)) {
 	die(mysql_error());
 }
 
-/* ¥¥Ω® <ng_class> */
+/* ÂàõÂª∫ <ng_class> */
 $sql = "CREATE TABLE `ng_class` (
 		`ID` int(11) unsigned NOT NULL auto_increment,
 		`class_user` int(11) unsigned NOT NULL,
@@ -130,7 +130,7 @@ if (!mysql_query($sql,$con)) {
 }
 
 
-/* ¥¥Ω® <ng_post> */
+/* ÂàõÂª∫ <ng_post> */
 $sql = "CREATE TABLE `ng_post` (
 		`ID` int(11) unsigned NOT NULL auto_increment,
 		`post_user` int(11) unsigned NOT NULL,
@@ -168,7 +168,7 @@ if (!mysql_query($sql,$con)) {
 }
 
 
-/* ¥¥Ω® <ng_postmeta> */
+/* ÂàõÂª∫ <ng_postmeta> */
 $sql = "CREATE TABLE `ng_postmeta` (
 		`meta_id` int(11) unsigned NOT NULL auto_increment,
 		`post_id` int(11) unsigned NOT NULL,
@@ -185,7 +185,7 @@ if (!mysql_query($sql,$con)) {
 }
 
 
-/* ¥¥Ω® <ng_comment> */
+/* ÂàõÂª∫ <ng_comment> */
 $sql = "CREATE TABLE `ng_comment` (
 		`comment_id` int(11) unsigned NOT NULL auto_increment,
 		`comment_post_id` int(11) unsigned NOT NULL,
@@ -210,7 +210,7 @@ if (!mysql_query($sql,$con)) {
 
 	
 
-/* ¥¥Ω® <ng_commentmeta> */
+/* ÂàõÂª∫ <ng_commentmeta> */
 $sql = "CREATE TABLE `ng_commentmeta` (
 		`meta_id` int(11) unsigned NOT NULL auto_increment,
 		`comment_id` int(11) unsigned NOT NULL,
@@ -227,7 +227,7 @@ if (!mysql_query($sql,$con)) {
 }
 
 
-/* ¥¥Ω® <ng_commentmet_extra> */
+/* ÂàõÂª∫ <ng_commentmet_extra> */
 $sql = "CREATE TABLE `ng_comment_extra` (
 		`extra_id` int(11) unsigned NOT NULL auto_increment,
 		`comment_id` int(11) unsigned NOT NULL,
@@ -244,7 +244,7 @@ if (!mysql_query($sql,$con)) {
 }
 
 	
-/* ¥¥Ω® <ng_submit> */
+/* ÂàõÂª∫ <ng_submit> */
 $sql = "CREATE TABLE `ng_submit` (
 		`submit_id` int(11) unsigned NOT NULL auto_increment,
 		`submit_user` int(11) unsigned NOT NULL,
@@ -264,7 +264,7 @@ if (!mysql_query($sql,$con)) {
 }
 
 	
-/* ¥¥Ω® <ng_log> */
+/* ÂàõÂª∫ <ng_log> */
 $sql = "CREATE TABLE `ng_log` (
 		`log_id` int(11) unsigned NOT NULL auto_increment,
 		`login_user` int(11) unsigned NOT NULL,
@@ -282,7 +282,7 @@ if (!mysql_query($sql,$con)) {
 }
 
 	
-/* ¥¥Ω® <ng_meta> */
+/* ÂàõÂª∫ <ng_meta> */
 $sql = "CREATE TABLE `ng_meta` (
 		`meta_id` int(11) unsigned NOT NULL auto_increment,
 		`meta_key` varchar(255) NOT NULL,

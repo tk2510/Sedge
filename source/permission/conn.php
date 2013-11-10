@@ -1,6 +1,6 @@
-<?php
+Ôªø<?php
 /*****************************
-* ˝æ›ø‚¡¨Ω”
+*Êï∞ÊçÆÂ∫ìËøûÊé•
 *****************************/
 
 function write_db($sql)
@@ -12,9 +12,9 @@ function write_db($sql)
 	}
 	mysql_select_db("sedge", $conn);
 
-	// echo '<br>' . $sql; // œ‘ æsql”Ôæ‰
+	// echo '<br>' . $sql; // ÊòæÁ§∫sqlËØ≠Âè•
 	
-	return mysql_query($sql,$conn);// –¥»Î ˝æ›ø‚
+	return mysql_query($sql,$conn);// ÂÜôÂÖ•Êï∞ÊçÆÂ∫ì
 }
 
 ?>
