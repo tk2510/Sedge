@@ -1,12 +1,12 @@
 ﻿<?php
 
-include('conn.php'); // 连接数据库
+require_once('__conn.php'); // 连接数据库
 
 /* 
     插入一条记录
 	$para为key-value数组，key属性名，value为值
 	$talbe 为表名
-	返回执行结果
+	返回执行布尔值，true：插入成功， false：插入失败
 */
 function insert($para, $table)
 {

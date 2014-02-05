@@ -15,6 +15,7 @@ $user[] = array(
 	"user_registered" => time(),
 	"user_stuid" => "2011301500236",
 	"user_nickname" => "Ng",
+	"user_gender" => 0,
 	"user_name" => "Lihua",
 );
 
@@ -25,6 +26,7 @@ $user[] = array(
 	"user_registered" => time(),
 	"user_stuid" => "2011301500789",
 	"user_nickname" => "LL",
+	"user_gender" => 0,
 	"user_name" => "李雷",
 );
 
@@ -35,6 +37,7 @@ $user[] = array(
 	"user_registered" => time(),
 	"user_stuid" => "2011301500699",
 	"user_nickname" => "HMM",
+	"user_gender" => 1,
 	"user_name" => "韩梅梅",
 );
 

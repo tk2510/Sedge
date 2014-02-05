@@ -1,15 +1,15 @@
-<?php
+ï»¿<?php
 
-include('__conn.php'); // Á¬½ÓÊı¾İ¿â
+require_once('__conn.php'); // è¿æ¥æ•°æ®åº“
 
-/* ²éÑ¯
-	$selÎªselectÌõ¼ş£¬$fromÎªfromÌõ¼ş£¬ $whereÎªwhere¼°ÆäËüÌõ¼ş
-	·µ»Ø²éÑ¯½á¹ûarray
+/* æŸ¥è¯¢
+	$selä¸ºselectæ¡ä»¶ï¼Œ$fromä¸ºfromæ¡ä»¶ï¼Œ $whereä¸ºwhereåŠå…¶å®ƒæ¡ä»¶
+	è¿”å›æŸ¥è¯¢ç»“æœarray
 */
 function select($sel, $from, $where)
 {
 	$str = 'SELECT ' . $sel . ' FROM ' . $from . ' WHERE ' . $where;
-	// echo $str;
+	echo $str . '<br/>';
 	return write_db($str);
 }
 

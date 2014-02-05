@@ -6,6 +6,7 @@
 function write_db($sql)
 {
 	$conn = mysql_connect("localhost","sedgeadmin","sedge123","sedgeadmin");
+	mysql_query("set names utf8");
 	if (!$conn)
 	{
 	  die('Could not connect: ' . mysql_error());
