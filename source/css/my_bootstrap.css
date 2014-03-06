@@ -1,0 +1,61 @@
+﻿body {
+  font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+  padding-top: 70px;
+}
+
+
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background-color: MediumSeaGreen;
+  }
+
+.msyh {
+  font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+}
+
+.margin-base-vertical {
+	margin: 40px 0;
+}
+		
+/*
+h1,
+.h1 {
+  font-size: 36px;
+}
+
+h2,
+.h2 {
+  font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+}
+
+
+
+h3,
+.h3 {
+  font-size: 24px;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+}
+
+h5,
+.h5 {
+  font-size: 14px;
+}
+
+h6,
+.h6 {
+  font-size: 12px;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+*/

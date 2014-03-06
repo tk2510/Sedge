@@ -1,0 +1,177 @@
+table.altrowstable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #a9c6c9;
+    border-collapse: collapse;
+}
+
+table.altrowstable th {
+	font-size: 14px;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+
+table.altrowstable td {
+	text-align:center;
+	font-size: 14px;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+
+.oddrowcolor{
+    background-color:#d4e3e5;
+}
+
+.evenrowcolor{
+    background-color:#c3dde0;
+}
+
+a:link{
+	font-weight:bold; 
+	color:#3366FF; 
+	text-decoration:underline; 
+} 
+a:visited { 
+	font-weight:bold; 
+	color:#3366FF; 
+	text-decoration:none; 
+} 
+a:hover { 
+	font-weight:bold; 
+	color:#000000; 
+	text-decoration:none; 
+} 
+
+
+/*- Menu Tabs --------------------------- */
+  #pretab {
+	  margin:0px;
+	  padding:0px;
+	  text-align: center;
+
+  }
+  
+  #tabsH {
+    background:#000;
+	padding:0px;
+	line-height: 35px;
+	width: 80%;
+	font-size: 16px;
+	font-family: Verdana;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	margin-top:0;
+	margin-bottom:30px;
+    }
+
+
+	
+	  
+    #tabsH ul {
+	margin:0;
+	padding:10px 10px 0 0px;
+	list-style:none;
+      }
+    #tabsH li {
+      display:inline;
+      margin:0;
+      padding:0;
+	  zoom:1;
+      }
+    #tabsH a {
+      float:left;
+      background:url("images/tableftH.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabsH a span {
+      float:left;
+      display:block;
+      background:url("images/tabrightH.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#FFF;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsH a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsH a:hover span {
+      color:#FFF;
+      }
+    #tabsH a:hover {
+      background-position:0% -42px;
+      }
+    #tabsH a:hover span {
+      background-position:100% -42px;
+      }
+
+.title {
+	width: 950px;
+	padding: 15px 0px 15px 0px;
+	margin-bottom:20px;
+	background-color: #E7F0FF;
+	border-left: #9FCFEF 1px solid;
+	border-right: #9FCFEF 1px solid;
+	border-bottom: #9FCFEF 1px solid;
+	font-family: Verdana;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.blk {
+	margin-bottom:20px;	
+}
+.ptt {
+	width: 940px;
+	line-height: 30px;
+	margin: 10px 20px 0px 25px;
+	padding-left: 10px;
+	font-size: 18px;
+	color: black;
+	font-weight: bold;
+	text-align: left;
+	background-color: #E7F0FF;
+}
+
+.ptx {
+	width: 930px;
+	margin: 0px 30px 10px 25px;
+	padding: 5px 0px 5px 20px;
+	font-size: 16px;
+	text-align: left;
+	background-color: #F7FFE7;
+	word-wrap: break-word;
+}
+
+.btn
+{
+	font-size:16px;
+	background-color: #33a7e0;
+	border-width: 0px;
+	color: #fff;
+	padding-right: 23px;
+	padding-left: 23px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-align:center;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+a.btn{
+	color:#fff; 
+	text-decoration:none; 
+}
+
+.bot {
+	margin-top:20px;
+}
+
+	  
